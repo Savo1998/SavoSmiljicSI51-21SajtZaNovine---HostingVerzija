@@ -1,0 +1,90 @@
+body {
+  background-image: linear-gradient(180deg, rgb(240, 240, 240), rgb(37, 37, 37));
+}
+
+main {
+  padding-bottom: 50px;
+}
+
+#forma {
+  display: flex;
+  width: 100%;
+  color: #111;
+}
+
+#forma form {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#forma input, textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 1px solid #111;
+  border-radius: 20px;
+  background-color: #ddd;
+  color: #111;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+.posaljiDugme{
+  font-size: 25px;
+  font-weight: 800;
+  padding: 25px 50px;
+  color: #111;
+  background-color: #ddd;
+  border-radius: 25px;
+  cursor: pointer;
+  border: 1px solid #222;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+.zatvoriDugme{
+  font-size: 15px;
+  font-weight: 500;
+  padding: 25px 50px;
+  color: #111;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+#slikaLokacije {
+  border: 0.5px solid #222;
+  border-radius: 25px;
+  align-self: center;
+  padding: 0;
+}
+
+.obavestenje {
+  padding: 25px;
+  align-self: center;
+  border-radius: 25px;
+  margin-left: 45%;
+}
+
+@media only screen and (max-width: 800px) {
+  #slikaLokacije {
+    width: 350px;
+    height: auto;
+  }
+  .zatvoriDugme{
+  font-size: 10px;
+  font-weight: 250;
+  padding: 12.5px 25px;
+  color: #111;
+  border-radius: 12.5px;
+  cursor: pointer;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #slikaLokacije {
+      width: 350px;
+      height: auto;
+    }
+}

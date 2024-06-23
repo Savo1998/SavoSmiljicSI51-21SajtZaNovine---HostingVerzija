@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+header {
+  border-bottom: 0.33rem solid #bbb;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigacija {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #222;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.navigacioniLinkovi {
+  list-style: none;
+  display: flex;
+}
+
+#glavnaNavigacija a {
+  font-size: 1rem;
+}
+
+.navigacioniLinkovi li {
+  margin-left: 20px;
+}
+
+.navigacioniLinkovi a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navigacioniLinkovi a:hover {
+  color: #ddd;
+}
+
+.nevidljiviMeni {
+  background-color: #222;
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: .3s ease;
+}
+
+.nevidljiviMeni.active {
+  right: 0;
+
+}
+
+.hamburgerMeni {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  position: relative;
+}
+
+.hamburgerMeni span {
+  height: 5px;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+
+.hamburgerMeni span:nth-child(1) {
+  top: 25%
+}
+
+.hamburgerMeni span:nth-child(3) {
+  top: 75%
+}
+
+.hamburgerMeni.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburgerMeni.active span:nth-child(2){
+  opacity: 0;
+}
+
+.hamburgerMeni.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+main, #prviDeo, #drugiDeo {
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+main {
+  background-image: url("pozadina3.jpg");
+}
+
+#naslov {
+  text-align: center;
+  margin: 20px 0;
+  background-color: #ddd;
+  padding: 0 15rem;
+  border-radius: 2rem;
+  box-shadow: #222 1rem 1rem ;
+}
+
+#naslov h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+  color: #111;
+}
+
+#naslov h2 {
+  font-size: 2.5em;
+  font-weight: normal;
+  margin: 0;
+  color: #222;
+}
+
+#glavniNaslov {
+  animation-name: glavniNaslovBoje;
+  animation-duration: 8s;
+}
+
+@keyframes glavniNaslovBoje {
+  from {color: white;}
+  to {color: #111}
+}
+
+#uvodniParagraf, .kontejner {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  box-shadow: #222 -1rem 1rem;
+}
+
+#uvodniParagraf .Paragraf {
+  font-size: 1.2em;
+  text-align: justify;
+  color: #222;
+  margin: 0;
+}
+
+.kontejner {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding: 12px;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  border-radius: 12px;
+  text-align: justify;
+  margin-top: 48px;
+  transition: 0.5s ease;
+  border: 0.33rem solid #222;
+}
+
+.kontejner:hover {
+  scale: 1.05;
+  transition: 0.5s ease;
+}
+
+.pomocniKontejner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 12px;
+  padding: 12px;
+}
+
+.podKontejner1 {
+  box-shadow: -1.5rem 1.5rem rgba(51, 51, 51, 0.169);
+}
+
+.podKontejner2 {
+  box-shadow: 1.5rem 1.5rem rgba(51, 51, 51, 0.169);
+}
+
+.slika {
+  padding-top: 3.33rem;
+  display: flex;
+  width: 50%;
+  height: 50%;
+}
+
+.slajderSlika {
+  max-width: 1000px;
+  max-height: 500px;
+  position: relative;
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 2.5rem;
+  box-shadow: 1.5rem 1.5rem rgba(51, 51, 51, 0.52);
+}
+
+.slajderSlika img {
+  width: 100%;
+  display: none;
+}
+
+img.prezentujSlajd {
+  display: block;
+  animation-name: prelazSlika;
+  animation-duration: 1.5s;
+}
+
+.slajderSlika button{
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  margin-left: 5%;
+  transform: translate(-50%);
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 15px;
+  background-color: rgba(51, 51, 51, 0.5);
+  color: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.slajderSlika button:hover {
+  background-color: #222;
+}
+
+.prethodni {
+  left: 0;
+}
+
+.sledeci {
+  right: 0;
+}
+
+@keyframes prelazSlika {
+  from {opacity: .5;}
+  to {opacity: 1;}
+}
+
+#podnozje {
+  background-color: #f1f1f1;
+  color: #222;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  padding: 20px 0;
+  border-top: 1px solid #bbb;
+}
+
+.sadrzajPodnozja {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.sekcijaPodnozja {
+  flex: 1;
+  margin: 20px;
+}
+
+.sekcijaPodnozja h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sekcijaPodnozja p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.sekcijaPodnozja.linkovi ul li a{
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+  color: #555;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.sekcijaPodnozja.linkovi li{
+  list-style: none;
+}
+
+.sekcijaPodnozja.linkovi ul li a:hover {
+  text-decoration: underline;
+}
+
+.pravniDeo {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    border-top: 1px solid #bbb;
+    margin-top: 20px;
+  }
+
+/* responzivni dizajn */
+@media only screen and (max-width: 1200px) {
+  .navigacija {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .navigacioniLinkovi {
+    flex-direction:row;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navigacioniLinkovi li {
+    margin-left: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .kontejner {
+    width: 70%;
+  }
+
+  #uvodniParagraf,
+  .kontejner {
+    width: 80%;
+  }
+
+  #naslov {
+    width: 70%;
+    padding: 0;
+  }
+
+  #naslov h1 {
+    font-size: 2.5em;
+  }
+
+  #naslov h2 {
+    font-size: 1.2em;
+  }
+
+  #prviDeo, #drugiDeo {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navigacija {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .logo img {
+    display: flex;
+    height: 10rem;
+  }
+
+  #glavnaNavigacija {
+    display: none;
+  }
+
+
+  .hamburgerMeni {
+    display: block;
+  }
+
+  #uvodniParagraf, .kontejner {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .kontejner {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .slajderSlika {
+    width: 100%;
+  }
+
+  #naslov h1 {
+    font-size: 2em;
+  }
+
+  #naslov h2 {
+    font-size: 1em;
+  }
+}

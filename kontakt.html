@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naslovna stranica</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="forma.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navigacija">
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+      </div>
+      <ul id="glavnaNavigacija" class="navigacioniLinkovi">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="politika.html">Politika</a></li>
+        <li><a href="sport.html">Sport</a></li>
+        <li><a href="nauka.html">Nauka</a></li>
+        <li><a href="oNama.html">O nama</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+
+      <div class="nevidljiviMeni">
+        <ul class="navigacioniLinkovi">
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="politika.html">Politika</a></li>
+          <li><a href="sport.html">Sport</a></li>
+          <li><a href="nauka.html">Nauka</a></li>
+          <li><a href="oNama.html">O nama</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="hamburgerMeni">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  <div id="drugiDeo">
+    <div class="kontejner podKontejner1">
+      <div class="pomocniKontejner">
+        <h1>Dnevne Novine</h1>
+        <p>Adresa: Djure Djakovića bb, Zrenjanin 23000</p>
+        <p>Telefon: 111 222 333</p>
+        <p>Radno vreme: 09h - 17h svakog dana u nedelji</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="forma">
+    <div class="kontejner podKontejner2">
+      <div class="pomocniKontejner">
+        <form id="idForme">
+          <input required pattern="[a-zA-Z]{3,14}" type="text" id="ime" placeholder="Ime:" >
+          <input required pattern="[a-zA-Z]{3,14}" type="text" id="prezime" placeholder="Prezime:">
+          <input type="email" id="email" placeholder="E-mail Adresa:">
+          <input type="text" id="telefon" placeholder="Broj telefona:">
+          <textarea cols="50" rows="8" id="tekstPoruke" placeholder="Vaša Poruka:"></textarea>
+          <button type="submit" class="posaljiDugme">Pošalji</button>
+        </form>
+      </div>
+      <img src="mapa.jpg" class="slika" id="slikaLokacije" alt="mapa">
+    </div>
+  </div>
+
+  </main>
+
+  <footer id="podnozje">
+    <div class="sadrzajPodnozja">
+      <div class="sekcijaPodnozja linkovi">
+        <h2>Linkovi sajta</h2>
+        <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="politika.html">Politika</a></li>
+          <li><a href="sport.html">Sport</a></li>
+          <li><a href="nauka.html">Nauka</a></li>
+          <li><a href="oNama.html">O nama</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="sekcijaPodnozja kontakt">
+        <h2>Kontaktirajte nas</h2>
+        <p>Email: dnevneNovine@gmail.com</p>
+        <p>Telefon: 111 222 333 </p>
+      </div>
+    </div>
+    <div class="pravniDeo">
+      &copy; 2024 Dnevne Novine. All Rights Reserved.
+    </div>
+  </footer>
+  
+  
+  </div>
+
+  <dialog id="uspesnoPoslato" class="obavestenje">
+    <button class="gotovo1 zatvoriDugme">Poslato!</button>
+  </dialog>
+  
+  <dialog id="greska" class="obavestenje">
+    <button class="gotovo2 zatvoriDugme">Pokusajte opet</button>
+  </dialog>
+  
+  <script src="hamburger.js"></script>
+  <script src="kontaktForma.js"></script>
+  </body>
+  
+  </html>

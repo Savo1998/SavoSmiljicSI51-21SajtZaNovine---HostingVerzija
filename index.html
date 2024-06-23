@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naslovna stranica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navigacija">
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+      </div>
+      <ul id="glavnaNavigacija" class="navigacioniLinkovi">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="politika.html">Politika</a></li>
+        <li><a href="sport.html">Sport</a></li>
+        <li><a href="nauka.html">Nauka</a></li>
+        <li><a href="oNama.html">O nama</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+
+      <div class="nevidljiviMeni">
+        <ul class="navigacioniLinkovi">
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="politika.html">Politika</a></li>
+          <li><a href="sport.html">Sport</a></li>
+          <li><a href="nauka.html">Nauka</a></li>
+          <li><a href="oNama.html">O nama</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      
+      <div class="hamburgerMeni">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="prviDeo">
+      <div id="naslov">
+        <h1 id="glavniNaslov">Vesti dana</h1>
+        <h2>Sve što vam treba na jednom mestu!</p>
+      </div>
+      
+      <div id="uvodniParagraf">
+        <p class="Paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Auctor elit sed vulputate mi sit amet mauris commodo quis. Iaculis at erat pellentesque adipiscing commodo.
+        Viverra nam libero justo laoreet sit amet cursus sit amet. Sit amet cursus sit amet dictum sit amet. Id faucibus nisl
+        tincidunt eget nullam. Tincidunt vitae semper quis lectus nulla at volutpat diam ut. Sit amet cursus sit amet dictum sit
+        amet. Facilisis sed odio morbi quis commodo odio. Eu turpis egestas pretium aenean pharetra. Urna nunc id cursus metus.
+        Auctor urna nunc id cursus metus. Sed egestas egestas fringilla phasellus. Et sollicitudin ac orci phasellus. Sit amet
+        venenatis urna cursus eget nunc scelerisque viverra mauris. Non nisi est sit amet.</p>
+      </div>
+
+      <div class="slajderSlika">
+        <div class="slajdovi">
+            <a href="politika.html"><img class="slajd" src="politikaSlika.jpg" alt="slika o politici"></a>
+            <a href="sport.html"><img class="slajd" src="sportSlika.jpg" alt="slika o sportu"></a>
+            <a href="nauka.html"><img class="slajd" src="naukaSlika.jpg" alt="slika o nauci"></a>
+        </div>
+        <button class="prethodni" onclick="prethodniSlajd()">&#10094</button>
+        <button class="sledeci" onclick="sledeciSlajd()">&#10095</button>
+      </div>
+      <br>
+    </div>
+
+    <div id="drugiDeo">
+      <div class="kontejner podKontejner1">
+        <img class="slika" src="slike/politikaSlika.jpg" alt="slika o politici">
+        <div class="pomocniKontejner">
+          <h2 class="Naslov"><a href="politika.html">Vesti iz politike</a></h2>
+          <p class="Paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Mauris cursus mattis molestie a iaculis at. Adipiscing diam donec adipiscing
+            tristique risus nec feugiat in fermentum. Nulla aliquet enim tortor at auctor urna. Quisque egestas diam in arcu
+            cursus euismod quis viverra nibh. Faucibus a pellentesque sit amet porttitor eget. Aliquet lectus proin nibh nisl
+            condimentum id. Commodo ullamcorper a lacus vestibulum. Arcu bibendum at varius vel pharetra vel turpis nunc eget.
+            Amet volutpat consequat mauris nunc congue nisi vitae. Sit amet risus nullam eget felis. Ultrices neque ornare
+            aenean euismod elementum nisi quis eleifend. Nec tincidunt praesent semper feugiat.</p>
+        </div>
+      </div>
+
+      <div class="kontejner podKontejner2">
+        <img class="slika" src="sportSlika.jpg" alt="slika o sportu">
+        <div class="pomocniKontejner">
+          <h2 class="Naslov"><a href="sport.html">Vesti iz sporta</a></h2>
+            <p class="Paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Mauris cursus mattis molestie a iaculis at. Adipiscing diam donec adipiscing
+              tristique risus nec feugiat in fermentum. Nulla aliquet enim tortor at auctor urna. Quisque egestas diam in arcu
+              cursus euismod quis viverra nibh. Faucibus a pellentesque sit amet porttitor eget. Aliquet lectus proin nibh
+              nisl
+              condimentum id. Commodo ullamcorper a lacus vestibulum. Arcu bibendum at varius vel pharetra vel turpis nunc
+              eget.
+              Amet volutpat consequat mauris nunc congue nisi vitae. Sit amet risus nullam eget felis. Ultrices neque ornare
+              aenean euismod elementum nisi quis eleifend. Nec tincidunt praesent semper feugiat.</p>
+        </div>
+      </div>
+      
+      <div class="kontejner podKontejner1">
+        <img class="slika" src="naukaSlika.jpg" alt="slika o nauci">
+        <div class="pomocniKontejner">
+          <h2 class="Naslov"><a href="nauka.html">Vesti iz nauke</a></h2>
+            <p class="Paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Mauris cursus mattis molestie a iaculis at. Adipiscing diam donec adipiscing
+              tristique risus nec feugiat in fermentum. Nulla aliquet enim tortor at auctor urna. Quisque egestas diam in arcu
+              cursus euismod quis viverra nibh. Faucibus a pellentesque sit amet porttitor eget. Aliquet lectus proin nibh
+              nisl
+              condimentum id. Commodo ullamcorper a lacus vestibulum. Arcu bibendum at varius vel pharetra vel turpis nunc
+              eget.
+              Amet volutpat consequat mauris nunc congue nisi vitae. Sit amet risus nullam eget felis. Ultrices neque ornare
+              aenean euismod elementum nisi quis eleifend. Nec tincidunt praesent semper feugiat.</p>
+        </div>
+      </div>
+    </div>
+    <br>
+  </main>
+  
+<footer id="podnozje">
+  <div class="sadrzajPodnozja">
+    <div class="sekcijaPodnozja linkovi">
+      <h2>Linkovi sajta</h2>
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="politika.html">Politika</a></li>
+        <li><a href="sport.html">Sport</a></li>
+        <li><a href="nauka.html">Nauka</a></li>
+        <li><a href="oNama.html">O nama</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="sekcijaPodnozja kontakt">
+      <h2>Kontaktirajte nas</h2>
+      <p>Email: dnevneNovine@gmail.com</p>
+      <p>Telefon: 111 222 333 </p>
+    </div>
+  </div>
+  <div class="pravniDeo">
+    &copy; 2024 Dnevne Novine. All Rights Reserved.
+  </div>
+</footer>
+
+  
+  </div>
+
+  <script src="hamburger.js"></script>
+  <script src="slajderSlika.js"></script>
+</body>
+</html>
